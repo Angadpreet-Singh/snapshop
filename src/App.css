@@ -1,38 +1,48 @@
-.App {
-  text-align: center;
+.text-style {
+    color: #777777;
+    font-size: larger;
+    font-weight: 600;
+}
+.order-container-wrapper {
+    margin: 1rem 1rem;
+    cursor: pointer;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.order-container-wrapper .order-cart-container {
+    padding: 1rem 1rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.order-container-wrapper .order-cart-container .product-details-section {
+    display: flex;
+    flex-direction: column;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.order-container-wrapper .order-cart-container .product-price-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.App-link {
-  color: #61dafb;
+.order-container-wrapper .order-cart-container .product-status-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.order-container-wrapper .order-cart-container .product-name {
+    width: 10rem;
+}
+
+@media screen and (max-width:520px) {
+    .order-container-wrapper .product-price {
+        margin-top: 1rem;
+    }
+
+    .order-cart-container .product-status {
+        margin-top: 1rem;
+    }
+
+    .order-container-wrapper .order-cart-container .product-details-section {
+        align-items: center;
+    }
 }
