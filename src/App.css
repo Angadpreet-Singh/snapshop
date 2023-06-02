@@ -1,48 +1,48 @@
-.text-style {
-    color: #777777;
-    font-size: larger;
-    font-weight: 600;
-}
-.order-container-wrapper {
-    margin: 1rem 1rem;
-    cursor: pointer;
-}
-
-.order-container-wrapper .order-cart-container {
-    padding: 1rem 1rem;
-}
-
-.order-container-wrapper .order-cart-container .product-details-section {
-    display: flex;
-    flex-direction: column;
-}
-
-.order-container-wrapper .order-cart-container .product-price-section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.order-container-wrapper .order-cart-container .product-status-section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.order-container-wrapper .order-cart-container .product-name {
-    width: 10rem;
-}
-
-@media screen and (max-width:520px) {
-    .order-container-wrapper .product-price {
-        margin-top: 1rem;
+    .text-style {
+        color: #777777;
+        font-size: larger;
+        font-weight: 600;
+    }
+    .order-container-wrapper {
+        margin: 1rem 1rem;
+        cursor: pointer;
     }
 
-    .order-cart-container .product-status {
-        margin-top: 1rem;
+    .order-container-wrapper .order-cart-container {
+        padding: 1rem 1rem;
     }
 
     .order-container-wrapper .order-cart-container .product-details-section {
-        align-items: center;
+        display: flex;
+        flex-direction: column;
     }
-}
+
+    .order-container-wrapper .order-cart-container .product-price-section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .order-container-wrapper .order-cart-container .product-status-section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .order-container-wrapper .order-cart-container .product-name {
+        width: 10rem;
+    }
+
+    @media screen and (max-width:520px) {
+        .order-container-wrapper .product-price {
+            margin-top: 1rem;
+        }
+
+        .order-cart-container .product-status {
+            margin-top: 1rem;
+        }
+
+        .order-container-wrapper .order-cart-container .product-details-section {
+            align-items: center;
+        }
+    }

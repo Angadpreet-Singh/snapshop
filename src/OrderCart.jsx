@@ -1,19 +1,16 @@
 import moment from 'moment';
-import { useState } from 'react';
 import "./App.css"
 import { client } from './sanity';
 
 export const OrderCart = (props) => {
 
     const { id, totalPrice, orderStatus, orderDetails, date } = props
-    const [customerOrderStatus, setCustomerOrderStatus] = useState(orderStatus)
 
     const handleOrder = () => {
         client.patch(id)
             .set({ orderStatus: !orderStatus })
             .commit()
             .then((updatedBike) => {
-                setCustomerOrderStatus(!customerOrderStatus)
                 console.log('Order updated')
             })
             .catch((err) => {
@@ -24,7 +21,7 @@ export const OrderCart = (props) => {
     return (
         <div className="order-container-wrapper card p-3">
             <div>
-                {moment(date).format('MMMM Do YYYY')}
+                {moment(date).format('MMMM Do YYYY')} <span>ORDER ID : </span> {id}
             </div>
             <div className="row order-cart-container">
                 <div className="col-sm-12 col-lg-4 product-details-section">
@@ -45,7 +42,7 @@ export const OrderCart = (props) => {
 
                 <div className="col-sm-12 col-lg-4 product-status-section">
                     <div className="product-status">
-                        <button className='btn btn-dark' onClick={handleOrder}>{customerOrderStatus ? "PACKED" : "UNDER PROCESS"}</button>
+                        <button className='btn btn-dark' onClick={handleOrder}>{orderStatus ? "PACKED" : "UNDER PROCESS"}</button>
                     </div>
                 </div>
             </div>
